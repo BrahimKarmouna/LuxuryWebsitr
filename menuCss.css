@@ -1,0 +1,74 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu-icon {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 2;
+}
+
+button#menu-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.menu-icon i {
+    color: #000;
+}
+
+.menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    transition: left 0.5s;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.content {
+    padding: 20px;
+    transition: margin-left 0.5s;
+}
+
+/* Style for active menu item */
+.menu a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #FF00FF; /* You can replace this with your brand color */
+}
+
+.menu-open {
+    left: 0;
+}
+
+.content-shifted {
+    margin-left: 250px;
+}

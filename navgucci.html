@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        body {
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        /* Add your custom styles here */
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="menuCss.css">
+    <link rel="stylesheet" href="navCss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Include Font Awesome for icons -->
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<header>
+
+
+    <div class="navbar">
+        <a style="color: black;" class="logo" href="home.html">SARTIE</a>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#" class="nav-link">Men</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Women</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Kids</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Accessories</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Sale</a></li>
+            <li class="nav-item">
+                <input type="text" class="search-bar" placeholder="Search">
+            </li>
+            <li class="nav-item">
+               <a href="signUP.html"> <i  class="fas fa-user user-icon"></i> </a><!-- User icon -->
+            </li>
+            <li class="nav-item">
+                <i class="fas fa-shopping-bag bag-icon"></i> <!-- Bag icon -->
+            </li>
+        </ul>
+    </div>
+
+    </div>
+
+    
+    <div class="menu-icon">
+        <button id="menu-button" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">GUCCI</a></li>
+            <li><a href="#">LOUISS VUITTON</a></li>
+            <li><a href="#">PRADA</a></li>
+            <li><a href="#">BRAHMIN</a></li>
+            <li><a href="#">DIOR</a></li>
+            <li><a href="#">SUNGLASSES</a></li>
+            <li><a href="#">HANDBAGS</a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <!-- Your page content goes here -->
+    </div> 
+</header>
+
+<div class="slider">
+    <div class="slider-viewport">
+    <div id="img1">
+        <div id="img2">
+        <div id="img3">
+            <div id="img4">
+            <div id="img5">
+                <div class="slider-content">
+                    <img src="./1.png">
+                    <img src="./1.png">
+                    <img src="./1.png">
+                    <img src="./1.png">
+                    <img src="./1.png">
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="slider-nav">
+    <a href="#img1"></a>
+    <a href="#img2"></a>
+    <a href="#img3"></a>
+    <a href="#img4"></a>
+    <a href="#img5"></a>
+    </div>
+</div>
+</body>
+</html>
+<script src="menu.js"></script>
+<script>
+    function toggleMenu() {
+        var menu = document.querySelector('.menu');
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
+    }
+</script>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Product Slider</title>
+
+    <!-- Add the Swiper.js library -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .swiper-container {
+            width: 80%; /* Adjust the width as needed */
+            overflow: hidden;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            transition: transform 0.5s ease; /* Add transition for smooth effect */
+        }
+
+        .product-card {
+            max-width: 350px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            overflow: hidden;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .product-brand {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            padding: 0 10px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            color: #333;
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #ff9900;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .retail-price {
+            font-size: 14px;
+            color: #777;
+            text-decoration: line-through;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart-button,
+        .buy-now-button {
+            background-color: gold;
+            color: #222;
+            font-size: 14px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+
+        .add-to-cart-button:hover,
+        .buy-now-button:hover {
+            background-color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!-- Product 1 -->
+        <div class="swiper-slide">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://backend.yoogiscloset.com/media/catalog/product/5/4/547865_01.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=840&width=630" alt="Luxury Product 1">
+                </div>
+                <div class="product-brand">LOUIS VUITTON</div>
+                <div class="product-title">Very great used bag, perfect as a gift</div>
+                <div class="product-price">$999.99</div>
+                <div class="retail-price">$1299.99</div>
+                <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+                <button class="buy-now-button" onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="swiper-slide">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://backend.yoogiscloset.com/media/catalog/product/4/1/412603_01.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=840&width=630" alt="Luxury Product 2">
+                </div>
+                <div class="product-brand">GUCCI</div>
+                <div class="product-title">Pink Quilted Velvet Embroidered Blind For Love Medium Marmont Bag</div>
+                <div class="product-price">$1700</div>
+                <div class="retail-price">$2299.99</div>
+                <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+                <button class="buy-now-button" onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="swiper-slide">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://backend.yoogiscloset.com/media/catalog/product/4/5/456243_01.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=840&width=630" alt="Luxury Product 3">
+                </div>
+                <div class="product-brand">GUCCI</div>
+                <div class="product-title">Pink Guccissima Leather Padlock Medium Shoulder Bag</div>
+                <div class="product-price">$999.99</div>
+                <div class="retail-price">$1299.99</div>
+                <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+                <button class="buy-now-button" onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="swiper-slide">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://backend.yoogiscloset.com/media/catalog/product/4/6/468503_01.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=840&width=630" alt="Luxury Product 4">
+                </div>
+                <div class="product-brand">CHRISTIAN DIOR</div>
+                <div class="product-title">Pink Cannage Quilted Lambskin Leather Large Lady Dior Bag</div>
+                <div class="product-price">$1495</div>
+                <div class="retail-price">$4600</div>
+                <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+                <button class="buy-now-button" onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="swiper-slide">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://backend.yoogiscloset.com/media/catalog/product/4/1/412603_01.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=840&width=630" alt="Luxury Product 5">
+                </div>
+                <div class="product-brand">GUCCI</div>
+                <div class="product-title">Pink Quilted Velvet Embroidered Blind For Love Medium Marmont Bag</div>
+                <div class="product-price">$1700</div>
+                <div class="retail-price">$2299.99</div>
+                <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+                <button class="buy-now-button" onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="swiper-slide">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://backend.yoogiscloset.com/media/catalog/product/4/5/456243_01.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=840&width=630" alt="Luxury Product 6">
+                </div>
+                <div class="product-brand">GUCCI</div>
+                <div class="product-title">Pink Guccissima Leather Padlock Medium Shoulder Bag</div>
+                <div class="product-price">$999.99</div>
+                <div class="retail-price">$1299.99</div>
+                <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+                <button class="buy-now-button" onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="swiper-slide">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://backend.yoogiscloset.com/media/catalog/product/4/6/468503_01.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=840&width=630" alt="Luxury Product 7">
+                </div>
+                <div class="product-brand">CHRISTIAN DIOR</div>
+                <div class="product-title">Pink Cannage Quilted Lambskin Leather Large Lady Dior Bag</div>
+                <div class="product-price">$1495</div>
+                <div class="retail-price">$4600</div>
+                <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+                <button class="buy-now-button" onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add the Swiper.js library -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+.SecondPart{
+    background-color: greenyellow;
+    height: 400px;
+    
+    display: flex;
+   
+   
+}
+.PicturLift{
+   
+    
+    width: 37%;
+    height: 100%;
+}
+.Ftext{
+    background-color: black;
+    height: 100%;
+    width: 37%;
+    /* margin-left: 20px; */
+    text-align: right;
+}
+/* h2{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 30%;
+} */
+/* .ThirdPart{
+    height: 900px;
+    background-color: aqua;
+    display: flex;
+    /* padding-top: 120px; */
+   
+/* } */
+
+/* 
+.Stext{
+   
+    
+    width: 43%;
+    height: 50%;
+}
+.PicturRight{
+    background-color: black;
+    height: 56.33%;
+    width: 43%;
+    /* margin-left: 20px; */
